@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="GuitarNoteTeacher.UI.Dialogs.GameOverDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             Height="540.666" Width="618.667">
+    <Grid x:Name="LayoutRoot" Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Content="Game Over" FontSize="40" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="569" Margin="0,0,-0.333,0"/>
+        <Button Command="{Binding CloseDialogCommand}" Content="OK" Width="162" FontSize="35" HorizontalAlignment="Center" Margin="209,417,197.667,-0.333" IsDefault="True" Grid.RowSpan="2" />
+        <Label Content="Score:" FontSize="40" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="295" Margin="0,82,0,0"/>
+        <Label Content="{Binding LastGameScore.Points}" FontSize="45" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="208" Margin="300,82,0,0" Height="63"/>
+        <Label Content="Congratulations!" Visibility="{Binding IsHighScore}" FontSize="40" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="569" Margin="0,145,-0.333,0" Height="69"/>
+        <Label Content="You set a new High Score" Visibility="{Binding IsHighScore}" FontSize="40" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="569" Margin="0,214,-0.333,0" Height="69"/>
+        <Label Content="Please put your initials:" Visibility="{Binding IsHighScore}" FontSize="40" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="428" Margin="0,288,0,0" Height="69"/>
+        <TextBox Text="{Binding Initials, Mode=TwoWay}" MaxLength="3" Visibility="{Binding IsHighScore}" HorizontalAlignment="Left" Margin="428,293,0,133.667" VerticalAlignment="Center" Height="64" Width="126" FontSize="45"/>
+    </Grid>
+</UserControl>

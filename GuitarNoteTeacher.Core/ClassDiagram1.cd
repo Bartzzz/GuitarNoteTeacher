@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GuitarNoteTeacher.Core.Events.GameOverEvent" Collapsed="true">
+    <Position X="17" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\GameOverEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GuitarNoteTeacher.Core.Events.GameStartEvent" Collapsed="true">
+    <Position X="17" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\GameStartEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GuitarNoteTeacher.Core.Services.NotesService.NotesService" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAACAAAAA=</HashCode>
+      <FileName>Services\NotesService\NotesService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GuitarNoteTeacher.Core.Services.NotesService.Fret">
+    <Position X="13.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQIAAAAAAAEAAAAAAAAAQAAAAAAAAAAAAAIAEAAAA=</HashCode>
+      <FileName>Services\NotesService\Objects\Fret.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GuitarNoteTeacher.Core.Services.NotesService.Objects.Notes">
+    <Position X="17.25" Y="3" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Services\NotesService\Objects\Notes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GuitarNoteTeacher.Core.Services.TimerService.TimerService" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAgAAAAAAAIAAAIAAAAAEAAAIAAAgAABAA=</HashCode>
+      <FileName>Services\TimerService\TimerService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="Prism.Mvvm.BindableBase" Collapsed="true">
+    <Position X="15.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Prism.Events.PubSubEvent&lt;TPayload&gt;" Collapsed="true">
+    <Position X="22" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Prism.Events.PubSubEvent" Collapsed="true">
+    <Position X="22" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="GuitarNoteTeacher.Core.Services.NotesService.INotesService" Collapsed="true">
+    <Position X="15.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Services\NotesService\INotesService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GuitarNoteTeacher.Core.Services.TimerService.ITimerService">
+    <Position X="19.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAIAAAAAEAAAAAAAgAAAAA=</HashCode>
+      <FileName>Services\TimerService\ITimerService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

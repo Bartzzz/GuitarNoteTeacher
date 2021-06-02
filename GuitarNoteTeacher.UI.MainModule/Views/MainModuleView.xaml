@@ -1,0 +1,211 @@
+﻿<UserControl x:Class="GuitarNoteTeacher.UI.MainModule.Views.MainModuleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GuitarNoteTeacher.UI.MainModule.Views"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="1880"
+             xmlns:prism="http://prismlibrary.com/" 
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             prism:ViewModelLocator.AutoWireViewModel="True" 
+             xmlns:behaviors="clr-namespace:GuitarNoteTeacher.UI.MainModule.Behaviors">
+    <i:Interaction.Triggers >
+        <i:EventTrigger EventName="PreviewKeyDown">
+            <prism:InvokeCommandAction Command="{Binding KeyDownEventCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid behaviors:KeyboardFocus.On="{Binding ElementName=GridToFocus}">
+        
+        <Image x:Name="GuitarBackgroundImage" HorizontalAlignment="Center" Height="392" VerticalAlignment="Bottom" Width="1880" Source="/GuitarNoteTeacher.UI.MainModule;component/Content/GuitarNeck.png" Margin="-1,0,1,0"/>
+        <Grid x:Name="GridToFocus" Focusable="True" VerticalAlignment="Top" Margin="244,10,259,0" >
+
+            <Button Content="A♭" HorizontalAlignment="Left" Margin="1287,10,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="G#" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="A" HorizontalAlignment="Left" Margin="0,109,27,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="A" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="A#" HorizontalAlignment="Left" Margin="117,109,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="A#" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="B♭" HorizontalAlignment="Left" Margin="117,10,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="A#" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="B" HorizontalAlignment="Left" Margin="234,109,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="B" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="C" HorizontalAlignment="Left" Margin="351,109,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="C" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="C#" HorizontalAlignment="Left" Margin="468,109,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="C#" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="D♭" HorizontalAlignment="Left" Margin="468,10,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="C#" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="D" HorizontalAlignment="Left" Margin="585,109,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="D" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="D#" HorizontalAlignment="Left" Margin="702,109,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="D#" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="E♭" HorizontalAlignment="Left" Margin="819,10,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="D#" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="E" HorizontalAlignment="Left" Margin="819,109,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="E" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="F" HorizontalAlignment="Left" Margin="936,109,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="F" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="F#" HorizontalAlignment="Left" Margin="1053,109,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="F#" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="G♭" HorizontalAlignment="Left" Margin="1053,10,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="F#" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="G" HorizontalAlignment="Left" Margin="1170,109,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="G" IsEnabled="{Binding GameStarted}"/>
+
+            <Button Content="G#" HorizontalAlignment="Left" Margin="1287,109,0,0" VerticalAlignment="Top" Width="90" Height="75" FontSize="35" RenderTransformOrigin="1,0" Command="{Binding ButtonClickedCommand}" CommandParameter="G#" IsEnabled="{Binding GameStarted}"/>
+
+        </Grid>
+        <StackPanel Name="EString" Orientation="Horizontal" Margin="33,373,38,71">
+            <Ellipse x:Name="E0"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="63,-16,0,0"  Visibility ="{Binding FretsList[0].IsVisible}"/>
+            <Ellipse x:Name="E1"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="85,-16,0,0"  Visibility ="{Binding FretsList[1].IsVisible}"/>
+            <Ellipse x:Name="E2"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="115,-15,0,0" Visibility ="{Binding FretsList[2].IsVisible}"/>
+            <Ellipse x:Name="E3"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="105,0,0,13"  Visibility ="{Binding FretsList[3].IsVisible}"/>
+            <Ellipse x:Name="E4"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="93,0,0,8"    Visibility ="{Binding FretsList[4].IsVisible}"/>
+            <Ellipse x:Name="E5"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="93,0,0,5"    Visibility ="{Binding FretsList[5].IsVisible}"/>
+            <Ellipse x:Name="E6"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="83,0,0,4"    Visibility ="{Binding FretsList[6].IsVisible}"/>
+            <Ellipse x:Name="E7"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="81,0,0,1"    Visibility ="{Binding FretsList[7].IsVisible}"/>
+            <Ellipse x:Name="E8"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="72,0,0,0"    Visibility ="{Binding FretsList[8].IsVisible}"/>
+            <Ellipse x:Name="E9"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="67,0,0,-3"   Visibility ="{Binding FretsList[9].IsVisible}"/>
+            <Ellipse x:Name="E10" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="65,0,0,-3"   Visibility ="{Binding FretsList[10].IsVisible}"/>
+            <Ellipse x:Name="E11" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="58,0,0,-4"   Visibility ="{Binding FretsList[11].IsVisible}"/>
+            <Ellipse x:Name="E12" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="53,0,0,-7"   Visibility ="{Binding FretsList[12].IsVisible}"/>
+            <Ellipse x:Name="E13" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="51,0,0,-8"   Visibility ="{Binding FretsList[13].IsVisible}"/>
+            <Ellipse x:Name="E14" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="44,0,0,-9"   Visibility ="{Binding FretsList[14].IsVisible}"/>
+            <Ellipse x:Name="E15" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="45,1,0,-9"   Visibility ="{Binding FretsList[15].IsVisible}"/>
+            <Ellipse x:Name="E16" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="40,2,0,-10"  Visibility ="{Binding FretsList[16].IsVisible}"/>
+            <Ellipse x:Name="E17" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="35,3,0,-10"  Visibility ="{Binding FretsList[17].IsVisible}"/>
+            <Ellipse x:Name="E18" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="33,3,0,-13"  Visibility ="{Binding FretsList[18].IsVisible}"/>
+            <Ellipse x:Name="E19" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="31,4,0,-13"  Visibility ="{Binding FretsList[19].IsVisible}"/>
+            <Ellipse x:Name="E20" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="25,4,0,-14"  Visibility ="{Binding FretsList[20].IsVisible}"/>
+            <Ellipse x:Name="E21" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="27,5,0,-13"  Visibility ="{Binding FretsList[21].IsVisible}"/>
+            <Ellipse x:Name="E22" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="21,6,0,-13"  Visibility ="{Binding FretsList[22].IsVisible}"/>
+        </StackPanel>
+
+        <StackPanel Name="AString" Orientation="Horizontal" Margin="33,342,38,102">
+            <Ellipse x:Name="A0"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="63,-9,0,0"   Visibility ="{Binding FretsList[23].IsVisible}"/>
+            <Ellipse x:Name="A1"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="85,-9,0,0"   Visibility ="{Binding FretsList[24].IsVisible}"/>
+            <Ellipse x:Name="A2"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="115,-7,0,0"  Visibility ="{Binding FretsList[25].IsVisible}"/>
+            <Ellipse x:Name="A3"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="105,8,0,13"  Visibility ="{Binding FretsList[26].IsVisible}"/>
+            <Ellipse x:Name="A4"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="93,0,0,5"    Visibility ="{Binding FretsList[27].IsVisible}"/>
+            <Ellipse x:Name="A5"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="93,0,0,5"    Visibility ="{Binding FretsList[28].IsVisible}"/>
+            <Ellipse x:Name="A6"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="83,0,0,4"    Visibility ="{Binding FretsList[29].IsVisible}"/>
+            <Ellipse x:Name="A7"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="81,0,0,1"    Visibility ="{Binding FretsList[30].IsVisible}"/>
+            <Ellipse x:Name="A8"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="72,0,0,0"    Visibility ="{Binding FretsList[31].IsVisible}"/>
+            <Ellipse x:Name="A9"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="67,0,0,-3"   Visibility ="{Binding FretsList[32].IsVisible}"/>
+            <Ellipse x:Name="A10" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="65,0,0,-3"   Visibility ="{Binding FretsList[33].IsVisible}"/>
+            <Ellipse x:Name="A11" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="58,0,0,-4"   Visibility ="{Binding FretsList[34].IsVisible}"/>
+            <Ellipse x:Name="A12" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="53,0,0,-7"   Visibility ="{Binding FretsList[35].IsVisible}"/>
+            <Ellipse x:Name="A13" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="51,0,0,-8"   Visibility ="{Binding FretsList[36].IsVisible}"/>
+            <Ellipse x:Name="A14" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="44,0,0,-9"   Visibility ="{Binding FretsList[37].IsVisible}"/>
+            <Ellipse x:Name="A15" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="45,1,0,-9"   Visibility ="{Binding FretsList[38].IsVisible}"/>
+            <Ellipse x:Name="A16" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="40,2,0,-10"  Visibility ="{Binding FretsList[39].IsVisible}"/>
+            <Ellipse x:Name="A17" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="35,3,0,-7"   Visibility ="{Binding FretsList[40].IsVisible}"/>
+            <Ellipse x:Name="A18" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="33,3,0,-8"   Visibility ="{Binding FretsList[41].IsVisible}"/>
+            <Ellipse x:Name="A19" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="31,4,0,-8"   Visibility ="{Binding FretsList[42].IsVisible}"/>
+            <Ellipse x:Name="A20" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="25,4,0,-10"  Visibility ="{Binding FretsList[43].IsVisible}"/>
+            <Ellipse x:Name="A21" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="27,5,0,-9"   Visibility ="{Binding FretsList[44].IsVisible}"/>
+            <Ellipse x:Name="A22" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="21,6,0,-9"   Visibility ="{Binding FretsList[45].IsVisible}"/>
+        </StackPanel>
+
+        <StackPanel Name="DString" Orientation="Horizontal" Margin="33,317,38,127">
+            <Ellipse x:Name="D0"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="63,-9,0,0"   Visibility ="{Binding FretsList[46].IsVisible}"/>
+            <Ellipse x:Name="D1"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="85,-9,0,0"   Visibility ="{Binding FretsList[47].IsVisible}"/>
+            <Ellipse x:Name="D2"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="115,-10,0,0" Visibility ="{Binding FretsList[48].IsVisible}"/>
+            <Ellipse x:Name="D3"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="105,0,0,8"   Visibility ="{Binding FretsList[49].IsVisible}"/>
+            <Ellipse x:Name="D4"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="93,0,0,8"    Visibility ="{Binding FretsList[50].IsVisible}"/>
+            <Ellipse x:Name="D5"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="93,0,0,5"    Visibility ="{Binding FretsList[51].IsVisible}"/>
+            <Ellipse x:Name="D6"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="83,0,0,4"    Visibility ="{Binding FretsList[52].IsVisible}"/>
+            <Ellipse x:Name="D7"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="81,0,0,1"    Visibility ="{Binding FretsList[53].IsVisible}"/>
+            <Ellipse x:Name="D8"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="72,0,0,7"    Visibility ="{Binding FretsList[54].IsVisible}"/>
+            <Ellipse x:Name="D9"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="67,0,0,5"    Visibility ="{Binding FretsList[55].IsVisible}"/>
+            <Ellipse x:Name="D10" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="65,0,0,6"    Visibility ="{Binding FretsList[56].IsVisible}"/>
+            <Ellipse x:Name="D11" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="58,0,0,9"    Visibility ="{Binding FretsList[57].IsVisible}"/>
+            <Ellipse x:Name="D12" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="53,0,0,8"    Visibility ="{Binding FretsList[58].IsVisible}"/>
+            <Ellipse x:Name="D13" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="51,0,0,5"    Visibility ="{Binding FretsList[59].IsVisible}"/>
+            <Ellipse x:Name="D14" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="44,0,0,8"    Visibility ="{Binding FretsList[60].IsVisible}"/>
+            <Ellipse x:Name="D15" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="45,1,0,5"    Visibility ="{Binding FretsList[61].IsVisible}"/>
+            <Ellipse x:Name="D16" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="40,2,0,5"    Visibility ="{Binding FretsList[62].IsVisible}"/>
+            <Ellipse x:Name="D17" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="35,3,0,7"    Visibility ="{Binding FretsList[63].IsVisible}"/>
+            <Ellipse x:Name="D18" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="33,3,0,7"    Visibility ="{Binding FretsList[64].IsVisible}"/>
+            <Ellipse x:Name="D19" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="31,4,0,7"    Visibility ="{Binding FretsList[65].IsVisible}"/>
+            <Ellipse x:Name="D20" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="25,4,0,8"    Visibility ="{Binding FretsList[66].IsVisible}"/>
+            <Ellipse x:Name="D21" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="27,5,0,9"    Visibility ="{Binding FretsList[67].IsVisible}"/>
+            <Ellipse x:Name="D22" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="21,6,0,10"   Visibility ="{Binding FretsList[68].IsVisible}"/>
+        </StackPanel>
+        <StackPanel Name="GString" Orientation="Horizontal" Margin="33,292,38,152">
+            <Ellipse x:Name="G0"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="63,-9,0,0"   Visibility ="{Binding FretsList[69].IsVisible}"/>
+            <Ellipse x:Name="G1"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="85,-9,0,0"   Visibility ="{Binding FretsList[70].IsVisible}"/>
+            <Ellipse x:Name="G2"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="115,-10,0,3" Visibility ="{Binding FretsList[71].IsVisible}"/>
+            <Ellipse x:Name="G3"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="105,0,0,15"  Visibility ="{Binding FretsList[72].IsVisible}"/>
+            <Ellipse x:Name="G4"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="93,0,0,13"   Visibility ="{Binding FretsList[73].IsVisible}"/>
+            <Ellipse x:Name="G5"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="93,0,0,15"   Visibility ="{Binding FretsList[74].IsVisible}"/>
+            <Ellipse x:Name="G6"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="83,0,0,13"   Visibility ="{Binding FretsList[75].IsVisible}"/>
+            <Ellipse x:Name="G7"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="81,0,0,16"   Visibility ="{Binding FretsList[76].IsVisible}"/>
+            <Ellipse x:Name="G8"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="72,0,0,16"   Visibility ="{Binding FretsList[77].IsVisible}"/>
+            <Ellipse x:Name="G9"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="67,0,0,16"   Visibility ="{Binding FretsList[78].IsVisible}"/>
+            <Ellipse x:Name="G10" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="65,0,0,16"   Visibility ="{Binding FretsList[79].IsVisible}"/>
+            <Ellipse x:Name="G11" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="58,0,0,19"   Visibility ="{Binding FretsList[80].IsVisible}"/>
+            <Ellipse x:Name="G12" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="53,0,0,19"   Visibility ="{Binding FretsList[81].IsVisible}"/>
+            <Ellipse x:Name="G13" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="51,0,0,19"   Visibility ="{Binding FretsList[82].IsVisible}"/>
+            <Ellipse x:Name="G14" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="44,0,0,20"   Visibility ="{Binding FretsList[83].IsVisible}"/>
+            <Ellipse x:Name="G15" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="45,1,0,21"   Visibility ="{Binding FretsList[84].IsVisible}"/>
+            <Ellipse x:Name="G16" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="40,2,0,23"   Visibility ="{Binding FretsList[85].IsVisible}"/>
+            <Ellipse x:Name="G17" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="35,3,0,24"   Visibility ="{Binding FretsList[86].IsVisible}"/>
+            <Ellipse x:Name="G18" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="33,3,0,23"   Visibility ="{Binding FretsList[87].IsVisible}"/>
+            <Ellipse x:Name="G19" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="31,4,0,25"   Visibility ="{Binding FretsList[88].IsVisible}"/>
+            <Ellipse x:Name="G20" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="25,4,0,27"   Visibility ="{Binding FretsList[89].IsVisible}"/>
+            <Ellipse x:Name="G21" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="27,5,0,27"   Visibility ="{Binding FretsList[90].IsVisible}"/>
+            <Ellipse x:Name="G22" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="21,6,0,28"   Visibility ="{Binding FretsList[91].IsVisible}"/>
+        </StackPanel>
+        <StackPanel Name="BString" Orientation="Horizontal" Margin="33,252,31,183">
+            <Ellipse x:Name="B0"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="63,-9,0,-16"   Visibility ="{Binding FretsList[92].IsVisible}"/>
+            <Ellipse x:Name="B1"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="85,-9,0,-16"   Visibility ="{Binding FretsList[93].IsVisible}"/>
+            <Ellipse x:Name="B2"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="115,-10,0,-13" Visibility ="{Binding FretsList[94].IsVisible}"/>
+            <Ellipse x:Name="B3"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="105,0,0,0"     Visibility ="{Binding FretsList[95].IsVisible}"/>
+            <Ellipse x:Name="B4"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="93,0,0,1"      Visibility ="{Binding FretsList[96].IsVisible}"/>
+            <Ellipse x:Name="B5"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="93,0,0,3"      Visibility ="{Binding FretsList[97].IsVisible}"/>
+            <Ellipse x:Name="B6"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="83,0,0,2"      Visibility ="{Binding FretsList[98].IsVisible}"/>
+            <Ellipse x:Name="B7"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="81,0,0,5"      Visibility ="{Binding FretsList[99].IsVisible}"/>
+            <Ellipse x:Name="B8"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="72,0,0,6"      Visibility ="{Binding FretsList[100].IsVisible}"/>
+            <Ellipse x:Name="B9"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="67,0,0,8"      Visibility ="{Binding FretsList[101].IsVisible}"/>
+            <Ellipse x:Name="B10" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="65,0,0,11"     Visibility ="{Binding FretsList[102].IsVisible}"/>
+            <Ellipse x:Name="B11" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="58,0,0,11"     Visibility ="{Binding FretsList[103].IsVisible}"/>
+            <Ellipse x:Name="B12" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="53,0,0,13"     Visibility ="{Binding FretsList[104].IsVisible}"/>
+            <Ellipse x:Name="B13" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="51,0,0,15"     Visibility ="{Binding FretsList[105].IsVisible}"/>
+            <Ellipse x:Name="B14" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="44,0,0,16"     Visibility ="{Binding FretsList[106].IsVisible}"/>
+            <Ellipse x:Name="B15" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="45,1,0,16"     Visibility ="{Binding FretsList[107].IsVisible}"/>
+            <Ellipse x:Name="B16" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="40,2,0,18"     Visibility ="{Binding FretsList[108].IsVisible}"/>
+            <Ellipse x:Name="B17" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="35,3,0,21"     Visibility ="{Binding FretsList[109].IsVisible}"/>
+            <Ellipse x:Name="B18" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="33,3,0,23"     Visibility ="{Binding FretsList[110].IsVisible}"/>
+            <Ellipse x:Name="B19" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="31,4,0,25"     Visibility ="{Binding FretsList[111].IsVisible}"/>
+            <Ellipse x:Name="B20" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="26,4,0,26"     Visibility ="{Binding FretsList[112].IsVisible}"/>
+            <Ellipse x:Name="B21" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="27,5,0,28"     Visibility ="{Binding FretsList[113].IsVisible}"/>
+            <Ellipse x:Name="B22" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="21,6,0,28"     Visibility ="{Binding FretsList[114].IsVisible}"/>
+        </StackPanel>
+        <StackPanel Name="eString" Orientation="Horizontal" Margin="33,219,31,213">
+            <Ellipse x:Name="e0"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="63,-9,0,-25"    Visibility ="{Binding FretsList[115].IsVisible}"/>
+            <Ellipse x:Name="e1"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="85,-9,0,-25"    Visibility ="{Binding FretsList[116].IsVisible}"/>
+            <Ellipse x:Name="e2"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="115,-10,0,-24"  Visibility ="{Binding FretsList[117].IsVisible}"/>
+            <Ellipse x:Name="e3"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="105,0,0,-10"    Visibility ="{Binding FretsList[118].IsVisible}"/>
+            <Ellipse x:Name="e4"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="93,0,0,-6"      Visibility ="{Binding FretsList[119].IsVisible}"/>
+            <Ellipse x:Name="e5"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="93,0,0,-4"      Visibility ="{Binding FretsList[120].IsVisible}"/>
+            <Ellipse x:Name="e6"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="83,0,0,0"       Visibility ="{Binding FretsList[121].IsVisible}"/>
+            <Ellipse x:Name="e7"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="81,0,0,3"       Visibility ="{Binding FretsList[122].IsVisible}"/>
+            <Ellipse x:Name="e8"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="72,0,0,5"       Visibility ="{Binding FretsList[123].IsVisible}"/>
+            <Ellipse x:Name="e9"  Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="67,0,0,6"       Visibility ="{Binding FretsList[124].IsVisible}"/>
+            <Ellipse x:Name="e10" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="65,0,0,8"       Visibility ="{Binding FretsList[125].IsVisible}"/>
+            <Ellipse x:Name="e11" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="58,0,0,12"      Visibility ="{Binding FretsList[126].IsVisible}"/>
+            <Ellipse x:Name="e12" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="53,0,0,11"      Visibility ="{Binding FretsList[127].IsVisible}"/>
+            <Ellipse x:Name="e13" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="51,0,0,14"      Visibility ="{Binding FretsList[128].IsVisible}"/>
+            <Ellipse x:Name="e14" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="44,0,0,16"      Visibility ="{Binding FretsList[129].IsVisible}"/>
+            <Ellipse x:Name="e15" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="45,1,0,18"      Visibility ="{Binding FretsList[130].IsVisible}"/>
+            <Ellipse x:Name="e16" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="40,2,0,21"      Visibility ="{Binding FretsList[131].IsVisible}"/>
+            <Ellipse x:Name="e17" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="35,3,0,23"      Visibility ="{Binding FretsList[132].IsVisible}"/>
+            <Ellipse x:Name="e18" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="33,3,0,25"      Visibility ="{Binding FretsList[133].IsVisible}"/>
+            <Ellipse x:Name="e19" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="31,4,0,28"      Visibility ="{Binding FretsList[134].IsVisible}"/>
+            <Ellipse x:Name="e20" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="26,4,0,29"      Visibility ="{Binding FretsList[135].IsVisible}"/>
+            <Ellipse x:Name="e21" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="27,5,0,31"      Visibility ="{Binding FretsList[136].IsVisible}"/>
+            <Ellipse x:Name="e22" Fill="Red" VerticalAlignment="Center" Height="18" Width="18" Margin="21,6,0,33"      Visibility ="{Binding FretsList[137].IsVisible}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

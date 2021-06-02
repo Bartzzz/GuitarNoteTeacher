@@ -1,0 +1,15 @@
+﻿<Window x:Class="GuitarNoteTeacher.UI.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:behaviors="clr-namespace:GuitarNoteTeacher.UI.Behaviors"
+        Title="{Binding Title}" Height="1080" Width="1920">
+
+    <Grid >
+        <Image HorizontalAlignment="Left" Height="1080" VerticalAlignment="Top" Width="1920" Source="/GuitarNoteTeacher;component/Content/Web 1920 – 3.png" />
+        <ContentControl prism:RegionManager.RegionName="ResultsRegion"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="240" Width="1880" Focusable="False"/>
+        <ContentControl Name="Main" prism:RegionManager.RegionName="MainGameRegion"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="500" Width="1880" />
+        <ContentControl prism:RegionManager.RegionName="InformationRegion"  HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="240" Width="1880" Focusable="false" />
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="GuitarNoteTeacher.UI.InformationModule.Views.InformationModuleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="240" d:DesignWidth="1880"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True" >
+    <Grid>
+        <Button Name="StartGameButton" Content="Start Game" FontStyle="Oblique" HorizontalAlignment="Center" VerticalAlignment="Center" Width="420" Height="120" FontSize="50" Command="{Binding StartGameCommand}" Visibility="{Binding StartButtonVisible}"/>
+        <Button Name="CorrectAnswerButton" Content="Good!" Foreground="Green" FontStyle="Oblique"  HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False" Width="200" Height="100" FontSize="50" Command="{Binding StartGameCommand}" Visibility="{Binding CorrectAnswerButtonVisible}"/>
+        <Button Name="WrongAnswerButton" Content="Wrong!" Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="100" FontSize="50" IsEnabled="False" Visibility="{Binding WrongAnswerButtonVisible}"/>
+    </Grid>
+</UserControl>
