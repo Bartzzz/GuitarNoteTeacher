@@ -115,6 +115,10 @@
       <Project>{7c1d5ece-884b-41ab-a63a-68c5dabd2edb}</Project>
       <Name>GuitarNoteTeacher.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GuitarNoteTeacher.UI.InformationModule\GuitarNoteTeacher.UI.InformationModule.csproj">
+      <Project>{7224780b-72f8-4234-b4b4-238f43714bf2}</Project>
+      <Name>GuitarNoteTeacher.UI.InformationModule</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GuitarNoteTeacher.UI.MainModule\GuitarNoteTeacher.UI.MainModule.csproj">
       <Project>{ed11f51a-3509-4d5a-931a-7d0eef5b892d}</Project>
       <Name>GuitarNoteTeacher.UI.MainModule</Name>
@@ -122,10 +126,6 @@
     <ProjectReference Include="..\GuitarNoteTeacher.UI.ResultsModule\GuitarNoteTeacher.UI.ResultsModule.csproj">
       <Project>{7f0a2666-cc6f-43b0-a9c2-8cb3aacdf175}</Project>
       <Name>GuitarNoteTeacher.UI.ResultsModule</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Information\GuitarNoteTeacher.UI.InformationModule.csproj">
-      <Project>{7224780b-72f8-4234-b4b4-238f43714bf2}</Project>
-      <Name>GuitarNoteTeacher.UI.InformationModule</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
